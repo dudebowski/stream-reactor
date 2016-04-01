@@ -113,7 +113,7 @@ $CONFLUENT_HOME/bin/kafka-avro-console-producer \
 * Check in Cassandra for the records
 
 ```sql
-SELECT * FROM connect_test.test_table
+SELECT * FROM connect_test.test_table;
 ``` 
 
 ## Distributed Deployment
@@ -125,7 +125,7 @@ To start in distributed mode run the following (note we only pass in one propert
 
 ```bash
 export CLASSPATH=kafka-connect-cassandra-0.1-jar-with-dependencies.jar
-$CONFLUENT_HOME/bin/connect-distributed etc/schema-registry/connect-avro-distributed.properties
+$CONFLUENT_HOME/bin/connect-distributed $CONFLUENT_HOME/etc/schema-registry/connect-avro-distributed.properties
 ```
 
 Now you can post in your task configuration
